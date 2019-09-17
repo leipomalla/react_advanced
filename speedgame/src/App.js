@@ -4,7 +4,7 @@ import './App.css';
 
 
 const App = () => (
-  <div>
+  <div id="container">
     <h1>Speedgame</h1>
     <div id="circle-container">
       <div className="circle" id="circle0"></div>
@@ -16,8 +16,8 @@ const App = () => (
     <div id="button-container">
       <button id="start">Start game</button>
       <button id="stop">Stop game</button>
-
-
+    </div>
+    <div id="scoreboard-container"> <div id="scoreboard">Your points: </div>
     </div>
 
     </div>
