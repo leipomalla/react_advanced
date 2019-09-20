@@ -1,0 +1,20 @@
+.circle {
+  width: 150px; 
+  height:150px; 
+  padding:40px; 
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+}
+#circle0{
+  background-color: #d52468;
+}
+#circle1{
+  background-color: #fdf04c;
+}
+#circle2{
+  background-color: #1a9fa7;
+}
+#circle3{
+  background-color: #fd8048;
+}

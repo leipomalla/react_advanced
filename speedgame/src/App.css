@@ -2,58 +2,7 @@ body{
   background-color: #163a56;
   }
 
-#container{
-  text-align: center;
-}  
 h1{
   text-align: center;
   color: lightblue;
-  margin: 40px 0 40px 0;
-}
-
-.circle {
-  width: 120px; 
-  height:120px; 
-  padding:40px; 
-  border-radius: 50%;
-  margin: 10px;
-}
-#circle0{
-  background-color: #d52468;
-}
-#circle1{
-  background-color: #fdf04c;
-}
-#circle2{
-  background-color: #1a9fa7;
-}
-#circle3{
-  background-color: #fd8048;
-}
-#circle-container{
-  display: flex;
-  text-align: center;
-  margin-left: 185px;
-  margin-left: 185px;
-}
-
-#button-container {
-  text-align: center;
-}
-
-button{
-  margin: 20px 20px 20px 20px;
-  height: 50px;
-  width: 80px;
-}
-#scoreboard-container{
-  
-  text-align: center;
-}
-
-#scoreboard{
-  background-color: white;
-  height: 80px;
-  width: 100px;
-  border: 1px solid white;
 }
