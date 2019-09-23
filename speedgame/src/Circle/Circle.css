@@ -1,20 +1,17 @@
-.circle {
-  width: 150px; 
-  height:150px; 
-  padding:40px; 
+.Circle {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  background-color: #efefef;
   margin: 20px;
   display: inline-block;
+  box-shadow: 0 0 3px 2px #333;
 }
-#circle0{
-  background-color: #d52468;
+
+.Circle.active {
+  box-shadow: inset 0 0 15px #333;
 }
-#circle1{
-  background-color: #fdf04c;
-}
-#circle2{
-  background-color: #1a9fa7;
-}
-#circle3{
-  background-color: #fd8048;
+div.Circle.active {
+  background-color: beige;
+  box-shadow: 0 0 15px rgba(red, green, blue, alpha);
 }
