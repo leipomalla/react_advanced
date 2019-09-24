@@ -1,22 +1,28 @@
-import React from "react";
+import { Card } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import "./App.css";
 import Button from "@material-ui/core/Button";
-
-import { Grid } from "@material-ui/core";
-import { Card } from "@material-ui/core";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { lightGreen } from "@material-ui/core/colors";
+import Checkbox from "@material-ui/core/Checkbox";
+import Divider from "@material-ui/core/Divider";
+import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import FormLabel from "@material-ui/core/FormLabel";
+import Icon from "@material-ui/core/Icon";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,16 +36,37 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     maxWidth: 400,
-    marginTop: 30,
+    height: 400,
+    marginTop: 60,
     marginRight: 20,
-    marginLeft: 20
+    marginLeft: 20,
+    border: "red 1px solid",
+    backgroundColor: "#ffe6cc",
+    color: "#12a19a"
   },
   media: {
     height: 200,
-    width: 125
+    width: 125,
+    border: "black 1px solid",
+    margin: 50
   },
   appBar: {
-    backgroundColor: "white"
+    backgroundColor: "#d1faf8"
+  },
+  appBarBottom: {
+    top: "auto",
+    bottom: 0,
+    height: 50,
+    backgroundColor: "#ffd9b3",
+    textAlign: "center"
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200
+  },
+  toolBar: {
+    backgroundColor: "#d1faf8"
   }
 }));
 
@@ -48,16 +75,23 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar classname={classes.appBar} position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Materia-UI testcase
-          </Typography>
-          <Button>Check this</Button>
-          <Button>And this</Button>
-          <Button>This too</Button>
-        </Toolbar>
-      </AppBar>
+      {/*<AppBar classname={classes.appBar} position="static">*/}
+      <Toolbar className={classes.toolBar}>
+        <Typography variant="h6" className={classes.title}>
+          Materia-UI testcase
+        </Typography>
+        <Button>
+          {" "}
+          <Icon>add_circle</Icon>Check this
+        </Button>
+        <Button>
+          <Icon color="secondary">add_circle</Icon>And this
+        </Button>
+        <Button>
+          <Icon color="action">add_circle</Icon>This too
+        </Button>
+      </Toolbar>
+      {/*</AppBar>*/}
       <Grid
         container
         direction="row"
@@ -71,12 +105,14 @@ export default function ButtonAppBar() {
             <Typography color="textSecondary" gutterBottom>
               Otter of yesterday
             </Typography>
-            <CardMedia
-              className={classes.media}
-              image="otter1.jpg"
-              title="Glowing beast of the wild"
+            <TextField
+              id="standard-name"
+              label="Name"
+              className={classes.textField}
+              margin="normal"
             />
-
+            <Divider />
+            <br />
             <Typography>
               <FormControl component="fieldset" className={classes.formControl}>
                 <FormLabel component="legend">Adorable, right?</FormLabel>
@@ -105,14 +141,13 @@ export default function ButtonAppBar() {
             </Typography>
             <CardMedia
               className={classes.media}
-              image="C:\Reactit\230919\src\otter2.jpg"
+              image="otter2.jpg"
               title="Paella dish"
             />
 
             <Typography variant="body2" component="p">
-              well meaning and kindly.
-              <br />
-              {'"an ottery smile"'}
+              <Checkbox>label="I'll get an otter"</Checkbox>
+              <Checkbox>label="I'll get my coat"</Checkbox>
             </Typography>
           </CardContent>
         </Card>
@@ -122,20 +157,25 @@ export default function ButtonAppBar() {
             <Typography color="textSecondary" gutterBottom>
               Otter of tomorrow
             </Typography>
-            <CardMedia
-              className={classes.media}
-              image="otter3.jpg"
-              title="I'll sleep when I'm dead"
-            />
 
             <Typography variant="body2" component="p">
-              For the recless hair and the turtle
-              <br />
-              {'"procrastinate"'}
+              <List component="nav" aria-label="main mailbox folders">
+                <ListItem button>
+                  <Icon>star</Icon>
+                  <ListItemText primary="Buy dog food" />
+                </ListItem>
+                <ListItem button>
+                  <Icon>star</Icon>
+                  <ListItemText primary="Get a dog" />
+                </ListItem>
+              </List>
             </Typography>
           </CardContent>
         </Card>
       </Grid>
+      <AppBar className={classes.appBarBottom}>
+        <Icon>star</Icon>
+      </AppBar>
     </div>
   );
 }
