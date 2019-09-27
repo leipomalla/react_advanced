@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     width: 200
   },
   toolBar: {
-    backgroundColor: "#d1faf8"
+    backgroundColor: "#ffbf80"
   }
 }));
 
@@ -174,7 +174,9 @@ export default function ButtonAppBar() {
         </Card>
       </Grid>
       <AppBar className={classes.appBarBottom}>
-        <Icon>star</Icon>
+        <Typography color="textSecondary">
+          <Icon>star</Icon>Copyright by Mari Leipola 2019
+        </Typography>
       </AppBar>
     </div>
   );
